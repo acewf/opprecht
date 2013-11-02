@@ -1,80 +1,113 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="robots" content="noodp" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>Jürg Opprecht</title>
-<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
-<!-- pedro -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="noodp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Jürg Opprecht</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="fonts/novecentowide-bold.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/slideshow.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/mouseSwipe.css" />
 </head>
 
 <body>
-<div id="wraper">
-    <div id="menu">
-        <button id="menu_show_hide"> </button>
-        <div class="target" style="float:left;"><a href="#" id="a_painting">THE PAINTING</a> <a href="#" id="a_artist">THE ARTIST</a> <a href="#" id="a_cause">THE CAUSE</a> <a href="#" id="a_exibition">THE EXHIBITION by ace</a> <a href="#" id="a_contact">CONTACT</a></div>
+  <div id="menu">
+    <button id="menu_show_hide"> </button>
+    <div class="target" style="float:left;"><a href="#" id="a_painting">THE PAINTING</a> <a href="#" id="a_artist">THE ARTIST</a> <a href="#" id="a_cause">THE CAUSE</a> <a href="#" id="a_exibition">THE EXHIBITION</a> <a href="#" id="a_contact">CONTACT</a></div>
+  </div>
+  <div id="wraper">
+    <div id="home"> <img src="imgs/home_bg.jpg" class="image"/>
+      <div id="text">JÜRG<br />OPPRECHT</div>
     </div>
-	
-    <div id="home_img"><img src="imgs/home_bg.jpg" /></div>
-    <div id="pages">
-        <div id="home">JÜRG<br />OPPRECHT</div>
-        <div id="painting"></div>
-        <div id="artist">
-            <div id="pagetitle">THE ARTIST</div>
-            <div>
-                <div id="photos"></div>
-                <div id="texts">
-                	<div class="texts_contents">
-	                    <p>MIT 13 JAHREN BEGANN ICH ZU MALEN UND HATTE MIT 16 JAHREN MEINE ERSTE AUSSTELLUNG. BIS HEUTE BIN ICH PASSIONIERTER MALER - WOHL BEMERKT MIT EINIGEN UNTERBRÜCHEN, DA ICH ES IMMER ALS HOBBY AUSÜBTE. DIE FARBEN, MATERIALIEN UND INSPIRATION SCHÖPFE ICH AUS DEN STEPPEN UND WÜSTEN AFRIKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.</p>
-                    </div>
-                </div>
-            </div>
+    <div id="painting">
+      <div id="pagetitle">THE PAINTING</div>
+      <div class="content">
+        <div id="viewport2" onselectstart="return false;">
+          <ul id="mouseSwipeScroll">
+            <li class="panel"><a href="#"><img src="imgs/pre1.jpg" /></a></li>
+            <li class="panel"><img src="imgs/pre2.jpg" /></li>
+            <li class="panel"><img src="imgs/pre3.jpg" /></li>
+            <li class="panel"><img src="imgs/pre4.jpg" /></li>
+            <li class="panel"><img src="imgs/pre5.jpg" /></li>
+            <li class="panel"><img src="imgs/pre6.jpg" /></li>
+            <li class="panel"><a href="#"><img src="imgs/pre7.jpg" /></a></li>
+            <li class="panel"><img src="imgs/pre8.jpg" /></li>
+            <li class="panel"><img src="imgs/pre9.jpg" /></li>
+          </ul>
         </div>
-        <div id="cause">
-            <div id="pagetitle">THE CAUSE</div>
-            <div>
-                <div id="photos"></div>
-                <div id="texts">
-                	<div class="texts_contents">
-	                    <p>BPN FÖRDERT DAS UNTERNEHMERTUM IN ENTWICKLUNGSLÄNDERN UND GIBT KEINE ALMOSEN. KONKRET SETZT BPN IHRE „HILFE ZUR SELBSTHILFE“ FOLGENDERMASSEN UM:
-                        <br><br>
-                        BPN BETREUT GESUNDE KMUS UND SCHAFFT DADURCH NACHHALTIGE ARBEITSPLÄTZE. UNSERE BISHERIGEN EINSATZLÄNDER SIND KIRGISIEN, MONGOLEI, BENIN, RUANDA UND NICARAGUA.
-                        <br><br>
-                        SEIT 1999 HAT BPN RUND 700 UNTERNEHMUNGEN MIT EINER BETRIEBSWIRTSCHAFTLICHEN AUSBILDUNG, PERSÖNLICHEM COACHING UND FAIREN KREDITEN GEFÖRDERT. DADURCH KONNTEN MEHR ALS 13’000 ARBEITSPLÄTZE GESCHAFFEN ODER ERHALTEN WERDEN.</p>
-                    </div>
-                 </div>
-            </div>
+      </div>
+    </div>
+    <div id="artist">
+      <div id="pagetitle">THE ARTIST</div>
+      <div class="content">
+        <div id="photos">
+          <div id="slides">
+            <img src="imgs/slide1.jpg" alt="">
+            <img src="imgs/slide2.jpg" alt="">
+            <img src="imgs/slide3.jpg" alt="">
+          </div>
         </div>
-        <div id="exibition">
-            <div id="pagetitle">THE EXIBITION</div>
-            <div>
-                <div id="photos"></div>
-                <div id="texts">
-                	<div id="texts_contents1" class="texts_contents">
-	                    <p>BPN FÖRDERT DAS UNTERNEHMERTUM IN ENTWICKLUNGSLÄNDERN UND GIBT KEINE ALMOSEN. KONKRET SETZT BPN IHRE „HILFE ZUR SELBSTHILFE“ FOLGENDERMASSEN UM:
-                        <br><br>
-                        BPN BETREUT GESUNDE KMUS UND SCHAFFT DADURCH NACHHALTIGE ARBEITSPLÄTZE. UNSERE BISHERIGEN EINSATZLÄNDER SIND KIRGISIEN, MONGOLEI, BENIN, RUANDA UND NICARAGUA.
-                        <br><br>
-                        SEIT 1999 HAT BPN RUND 700 UNTERNEHMUNGEN MIT EINER BETRIEBSWIRTSCHAFTLICHEN AUSBILDUNG, PERSÖNLICHEM COACHING UND FAIREN KREDITEN GEFÖRDERT. DADURCH KONNTEN MEHR ALS 13’000 ARBEITSPLÄTZE GESCHAFFEN ODER ERHALTEN WERDEN.BPN FÖRDERT DAS UNTERNEHMERTUM IN ENTWICKLUNGSLÄNDERN UND GIBT KEINE ALMOSEN. KONKRET SETZT BPN IHRE „HILFE ZUR SELBSTHILFE“ FOLGENDERMASSEN UM:
-                        <br><br>
-                        BPN BETREUT GESUNDE KMUS UND SCHAFFT DADURCH NACHHALTIGE ARBEITSPLÄTZE. UNSERE BISHERIGEN EINSATZLÄNDER SIND KIRGISIEN, MONGOLEI, BENIN, RUANDA UND NICARAGUA.
-                        <br><br>
-                        SEIT 1999 HAT BPN RUND 700 UNTERNEHMUNGEN MIT EINER BETRIEBSWIRTSCHAFTLICHEN AUSBILDUNG, PERSÖNLICHEM COACHING UND FAIREN KREDITEN GEFÖRDERT. DADURCH KONNTEN MEHR ALS 13’000 ARBEITSPLÄTZE GESCHAFFEN ODER ERHALTEN WERDEN.</p>
-                    </div>
-                 </div>
-            </div>
+        <div id="texts">
+          <div class="texts_contents">
+            MIT 13 JAHREN BEGANN ICH ZU MALEN UND HATTE MIT 16 JAHREN MEINE ERSTE AUSSTELLUNG. BIS HEUTE BIN ICH IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.PASSIONIERTER MALER - WOHL BEMERKT MIT EINIGEN UNTERBRÜCHEN, 132 13 132 321321 321 3 DA ICH ES IMMER ALS HOBBY AUSÜBTE. DIE FARBEN, MATERIALIEN UND INSPIRATION SCHÖPFE ICH AUS DEN STEPPEN UND WÜSTEN AFRIKAS ODER ASIENS. DESHAL fd343 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 45345B IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.X XXXXXX XXXX XXXXX
+          </div>
         </div>
-    </div></div>
-    <div id="footer">ddd</div>
+      </div>
+    </div>
+    <div id="cause">
+      <div id="pagetitle">THE CAUSE</div>
+      <div class="content">
+        <div id="photos">
+          <div id="slides2">
+            <img src="imgs/slide1.jpg" alt="">
+            <img src="imgs/slide2.jpg" alt="">
+            <img src="imgs/slide3.jpg" alt="">
+          </div>
+        </div>
+        <div id="texts">
+          <div class="texts_contents">
+            RÜN ANZUSIEDELN.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="exibition">
+      <div id="pagetitle">THE EXIBITION</div>
+      <div class="content">
+        <div id="photos">
+          <div id="slides3">
+            <img src="imgs/slide1.jpg" alt="">
+            <img src="imgs/slide2.jpg" alt="">
+            <img src="imgs/slide3.jpg" alt="">
+            <!--<a href="#" class="slidesjs-previous slidesjs-navigation"><</a>
+            <a href="#" class="slidesjs-next slidesjs-navigation">></a>-->
+          </div>
+          
+        </div>
+        <div id="texts">
+          <div class="texts_contents">
+            RD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div id="pagetitle">CONTACT</div>
+      <div class="content">
+      </div>
+    </div>
+  </div>
 </div>
-<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
-<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+<div id="footer"></div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.slides.min.js"></script> 
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.mouseSwipe.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

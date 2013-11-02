@@ -1,26 +1,72 @@
 /* CSS Document */
-html,body{height:100%;font-family:"Arial Black", Gadget, sans-serif;}
+html,body{height:100%;font-family:"NovecentowideBold";}
 
-#wraper{position:relative;}
+#wraper{}
 
 #menu{position:fixed;top:0;left:0;z-index:100;}
 #menu_show_hide{width:91px;height:88px;background:#e1a93c url(../imgs/icons_sprite.png) 0px 0px no-repeat;border:0;float:left;}
-#menu .target{height:88px;line-height:88px;vertical-align:middle;background:#fff;opacity:0.8;filter:alpha(opacity=80); /* For IE8 and earlier */}
-#menu .target a{padding:0 25px;font-size:16px;text-decoration:none;color:#31231D;}
+#menu .target{height:88px;line-height:88px;vertical-align:middle;background:#fff;opacity:0.8;filter:alpha(opacity=80);}
+#menu .target a{padding:0 25px;font-size:100%;text-decoration:none;color:#31231D;}
 
-#pages{width:100%;position:absolute;z-index:10;}
-#home, #artist, #painting, #cause, #exibition{height:1000px;background-color:#FFF;}
 
-#home{background:none;color:#E0A93B;font-size:138px;padding-top:250px;padding-left:84px;}
-#home_img{position:fixed;top:0;left:0;z-index:0;margin:auto;}
 
-#pagetitle{background-color:#FFF;text-align:center;vertical-align:middle;font-size:26px;color:#31231D;height:200px;line-height:200px;}
-#photos, #texts{width:50%;height:804px;float:left;}
 
-#texts{color:#FFF;font-size:22px;}
-.texts_contents{/*padding:112px 96px;*/margin:40px; width:80%; height:80%; padding:20px; overflow:auto;}
-#artist #texts, #exibition #texts{background-color:#31231D;}
-#cause #texts{background-color:#E0A93B;}
+#home{position:relative;height:100%;}
+#home_img{position:absolute;z-index:0;margin:auto;}
+#home #text{color:#E0A93B;font-size:8.9em;padding-top:250px;padding-left:84px;position:absolute;top:0;left:0;z-index:10;}
+.image{width:100%;height:auto;}
+
+
+#pagetitle{background-color:#FFF;text-align:center;vertical-align:middle;font-size:26px;color:#31231D;height:150px;line-height:150px;}
+
+
+.content{overflow: hidden;}
+
+#cause .content{background-color:#E0A93B;}
+#artist .content, #exibition .content{background-color:#31231D;}
+#contact .content{background-color:#FFF;}
+
+#photos, #texts{width:50%;height:100%;float:left;margin-bottom:-1000px;padding-bottom:1000px;}
+#slides,#slides2,#slides3{position:relative;}
+#photos{}
+#texts{/*background-color:#F00;*/}
+
+.texts_contents{width:80%;height:80%;margin:40px; color:#FFF;}
+
+
+
+.slidecontrols{position:absolute;top:0;right:0;}
+
+
+.thumbnails{}
+.thumbnails_li{width:400px;float:left;display: inline;}
 
 
 #footer{height:158px;background-color:#31231D;border-top:9px solid #e1a93c;}
+
+
+
+/* For tablets & smart phones */
+    @media (max-width: 767px) {
+      
+	  #home #text{font-size:3.9em;padding-top:100px;padding-left:44px;}
+	  #menu_show_hide{width:71px;height:68px;background-position:-10px -10px;}
+	  #menu .target{display:none;}
+	  #photos, #texts{width:100%;}
+	  #texts{left:0;}
+    }
+
+/* For smartphones */
+    @media (max-width: 480px) {
+		
+    }
+
+/* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+     
+    }
+
+/* For larger displays */
+    @media (min-width: 1200px) {
+      
+    }
