@@ -20,18 +20,30 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 #pagetitle{background-color:#FFF;text-align:center;vertical-align:middle;font-size:26px;color:#31231D;height:150px;line-height:150px;}
 
 
-.content{overflow: hidden;}
+.content{
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
 
 #cause .content{background-color:#E0A93B;}
 #artist .content, #exibition .content{background-color:#31231D;}
 #contact .content{background-color:#FFF;}
 
-#photos, #texts{width:50%;height:100%;float:left;margin-bottom:-1000px;padding-bottom:1000px;}
+#artist, #exibition, #cause, #contact{
+    position: relative;
+}
+
+#photos, #texts{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
 #slides,#slides2,#slides3{position:relative;}
 #photos{}
-#texts{/*background-color:#F00;*/}
+#texts{right: 0px;}
 
-.texts_contents{width:80%;height:80%;margin:40px; color:#FFF;}
+.texts_contents{margin:40px; color:#FFF;overflow:auto;}
 
 
 
@@ -52,8 +64,8 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 	  #home #text{font-size:3.9em;padding-top:100px;padding-left:44px;}
 	  #menu_show_hide{width:71px;height:68px;background-position:-10px -10px;}
 	  #menu .target{display:none;}
-	  #photos, #texts{width:100%;}
-	  #texts{left:0;}
+	  #photos, #texts{width:100%;position: relative;}
+	  #texts{}
     }
 
 /* For smartphones */
@@ -63,10 +75,11 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 
 /* For smaller displays like laptops */
     @media (min-width: 768px) and (max-width: 979px) {
+     /*.texts_contents{ max-height:400px;}*/
      
     }
 
 /* For larger displays */
     @media (min-width: 1200px) {
-      
+     /*.texts_contents{ max-height:600px;}*/
     }
