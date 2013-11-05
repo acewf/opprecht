@@ -1,3 +1,4 @@
+<div>LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL<br>MMMMMMMMMMMMMMMM</div>
 <?php
 /**
  * The main template file
@@ -18,6 +19,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
+			<div>INIT POST</div>
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* The loop */ ?>
@@ -30,7 +32,7 @@ get_header(); ?>
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
-
+		<div>END POST</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
