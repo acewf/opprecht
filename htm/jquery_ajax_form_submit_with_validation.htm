@@ -1,0 +1,56 @@
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	
+});
+function defaulttextRemove(){
+	$('.default').each(function(){
+		var defaultVal = $(this).attr('title');
+		if ($(this).val() == defaultVal){
+			$(this).val('');
+		}
+	});
+}
+</script>
+
+<style type="text/css">
+
+
+/* Form Validation */
+.styled span.error {font-size: 11px; background: none; display: block; padding: 2px; text-align: center;}
+.styled fieldset li.error {color: #D8000C; background: #fff0f0; border: 1px solid #f9c7c7; padding: 5px 0;}
+.styled fieldset li.error label {text-align: left;}
+
+/* Specific Form Rules */
+
+.success {order: 1px solid; margin: 0; padding: 10px; text-align: center; color: #4F8A10; background-color: #ebf6d9; border-color: #DFF2BF;}
+</style>
+
+		  <form id="form-contact" class="styled" action="formsubmit.php" method="post">
+		    <fieldset>
+			  <legend>Contact Form</legend>
+			  <ol>
+			    <li class="form-row">
+				  <label>Email:</label>
+				  <input id="input-email" type="text" class="text-input required email default" name="email" value="" title="Enter Your Email Address" />
+				</li>
+				<li class="form-row">
+				  <label>Name:</label>
+				  <input id="input-name" type="text" class="text-input required default" name="name" value="" title="Enter Your Full Name" />
+				</li>
+				<li class="form-row">
+				  <label>Phone:</label>
+				  <input id="input-phone" type="text" class="text-input" name="phone" value="" />
+				</li>
+				<li class="form-row">
+				  <label>Comments:</label>
+				  <textarea id="input-message" class="text-area" name="message" cols="40" rows="8"></textarea>
+				</li>
+				<li class="button-row text-right">
+				  <input class="btn-submit" type="submit" value="submit" name="submit" />
+				</li>
+			  </ol>
+			</fieldset>
+		  </form>

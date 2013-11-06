@@ -1,113 +1,200 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="robots" content="noodp" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Jürg Opprecht</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="fonts/novecentowide-bold.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="css/slideshow.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="css/mouseSwipe.css" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="noodp" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Jürg Opprecht</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+<link rel="stylesheet" type="text/css" href="fonts/novecentowide-bold.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/slideshow.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/mouseSwipe.css" />
+<link rel="stylesheet" type="text/css" href="css/scrollbar.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 </head>
 
 <body>
-  <div id="menu">
-    <button id="menu_show_hide"> </button>
-    <div class="target" style="float:left;"><a href="#" id="a_painting">THE PAINTING</a> <a href="#" id="a_artist">THE ARTIST</a> <a href="#" id="a_cause">THE CAUSE</a> <a href="#" id="a_exibition">THE EXHIBITION</a> <a href="#" id="a_contact">CONTACT</a></div>
+<div id="menu">
+  <button id="menu_show_hide"> </button>
+  <div class="target">
+    <ul>
+      <li><a href="#" id="a_painting">THE PAINTING</a></li>
+      <li><a href="#" id="a_artist">THE ARTIST</a></li>
+      <li><a href="#" id="a_cause">THE CAUSE</a></li>
+      <li><a href="#" id="a_exibition">THE EXHIBITION</a></li>
+      <li><a href="#" id="a_contact">CONTACT</a></li>
+    </ul>
   </div>
-  <div id="wraper">
-    <div id="home"> <img src="imgs/home_bg.jpg" class="image"/>
-      <div id="text">JÜRG<br />OPPRECHT</div>
-    </div>
-    <div id="painting">
-      <div id="pagetitle">THE PAINTING</div>
-      <div class="content">
-        <div id="viewport2" onselectstart="return false;">
-          <ul id="mouseSwipeScroll">
-            <li class="panel"><a href="#"><img src="imgs/pre1.jpg" /></a></li>
-            <li class="panel"><img src="imgs/pre2.jpg" /></li>
-            <li class="panel"><img src="imgs/pre3.jpg" /></li>
-            <li class="panel"><img src="imgs/pre4.jpg" /></li>
-            <li class="panel"><img src="imgs/pre5.jpg" /></li>
-            <li class="panel"><img src="imgs/pre6.jpg" /></li>
-            <li class="panel"><a href="#"><img src="imgs/pre7.jpg" /></a></li>
-            <li class="panel"><img src="imgs/pre8.jpg" /></li>
-            <li class="panel"><img src="imgs/pre9.jpg" /></li>
-          </ul>
-        </div>
+</div>
+<div id="wraper">
+  <div id="home"> <img src="imgs/home_bg.jpg" class="image"/>
+    <div id="text">JÜRG<br />
+      OPPRECHT</div>
+  </div>
+  <div id="painting">
+    <div id="pagetitle">THE PAINTING</div>
+    <div class="content">
+      <div id="viewport2" onselectstart="return false;">
+        <ul id="mouseSwipeScroll">
+          <li class="panel" id="p1"> <img src="imgs/pre1.jpg" class="mouseSwipeScroll-image" />
+            <div id="op1" class="overlay"> <img src="imgs/pre1.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="sold">SOLD</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+          <li class="panel" id="p2"><img src="imgs/pre2.jpg" class="mouseSwipeScroll-image" />
+            <div id="op2" class="overlay"> <img src="imgs/pre2.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="sold">SOLD</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+          <li class="panel" id="p3"><img src="imgs/pre3.jpg" class="mouseSwipeScroll-image" />
+            <div id="op3" class="overlay"> <img src="imgs/pre2.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="sold">SOLD</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+          <li class="panel" id="p4"><img src="imgs/pre4.jpg" class="mouseSwipeScroll-image" />
+            <div id="op4" class="overlay"> <img src="imgs/pre2.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="sold">SOLD</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+          <li class="panel" id="p5"><img src="imgs/pre5.jpg" class="mouseSwipeScroll-image" />
+            <div id="op5" class="overlay"> <img src="imgs/pre2.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="sold">SOLD</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+          <li class="panel" id="p6"><img src="imgs/pre6.jpg" class="mouseSwipeScroll-image" />
+            <div id="op6" class="overlay"> <img src="imgs/pre2.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="sold">SOLD</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+          <li class="panel" id="p7"><img src="imgs/pre7.jpg" class="mouseSwipeScroll-image" />
+            <div id="op7" class="overlay"> <img src="imgs/pre2.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="sold">SOLD</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+          <li class="panel" id="p8"><img src="imgs/pre8.jpg" class="mouseSwipeScroll-image" />
+            <div id="op8" class="overlay"> <img src="imgs/pre2.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="sold">SOLD</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+          <li class="panel" id="p9"><img src="imgs/pre9.jpg" class="mouseSwipeScroll-image" />
+            <div id="op9" class="overlay"> <img src="imgs/pre2.jpg" width="120" height="120" />
+              <p>NEW HORIZON II  -  2012</p>
+              <div>
+                <div class="cost">CHF 4500</div>
+                <div class="order">ORDER</div>
+              </div>
+              <a href="#" class="more-info">MORE</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-    <div id="artist">
-      <div id="pagetitle">THE ARTIST</div>
-      <div class="content">
-        <div id="photos">
-          <div id="slides">
-            <img src="imgs/slide1.jpg" alt="">
-            <img src="imgs/slide2.jpg" alt="">
-            <img src="imgs/slide3.jpg" alt="">
-          </div>
-        </div>
-        <div id="texts">
-          <div class="texts_contents">
-            MIT 13 JAHREN BEGANN ICH ZU MALEN UND HATTE MIT 16 JAHREN MEINE ERSTE AUSSTELLUNG. BIS HEUTE BIN ICH IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.PASSIONIERTER MALER - WOHL BEMERKT MIT EINIGEN UNTERBRÜCHEN, 132 13 132 321321 321 3 DA ICH ES IMMER ALS HOBBY AUSÜBTE. DIE FARBEN, MATERIALIEN UND INSPIRATION SCHÖPFE ICH AUS DEN STEPPEN UND WÜSTEN AFRIKAS ODER ASIENS. DESHAL fd343 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 45345B IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.X XXXXXX XXXX XXXXX
-          </div>
-        </div>
+  </div>
+  <div id="artist">
+    <div id="pagetitle">THE ARTIST</div>
+    <div class="content">
+      <div id="photos">
+        <div id="slides"> <img src="imgs/slide1.jpg" alt=""> <img src="imgs/slide2.jpg" alt=""> <img src="imgs/slide3.jpg" alt=""> </div>
+      </div>
+      <div id="texts">
+        <div id="txtbox1" class="texts_contents"> MIT 13 JAHREN BEGANN ICH ZU MALEN UND HATTE MIT 16 JAHREN MEINE ERSTE AUSSTELLUNG. BIS HEUTE BIN ICH IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.PASSIONIERTER MALER - WOHL BEMERKT MIT EINIGEN UNTERBRÜCHEN, 132 13 132 321321 321 3 DA ICH ES IMMER ALS HOBBY AUSÜBTE. DIE FARBEN, MATERIALIEN UND INSPIRATION SCHÖPFE ICH AUS DEN STEPPEN UND WÜSTEN AFRIKAS ODER ASIENS. DESHAL fd343 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 45345B IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.X XXXXXX XXXX XXXXX </div>
+      	<a href="#" id="a_totop" class="to-top"><img src="imgs/tree_small_orange.png" alt=""></a>
       </div>
     </div>
-    <div id="cause">
-      <div id="pagetitle">THE CAUSE</div>
-      <div class="content">
-        <div id="photos">
-          <div id="slides2">
-            <img src="imgs/slide1.jpg" alt="">
-            <img src="imgs/slide2.jpg" alt="">
-            <img src="imgs/slide3.jpg" alt="">
-          </div>
-        </div>
-        <div id="texts">
-          <div class="texts_contents">
-            RÜN ANZUSIEDELN.
-          </div>
-        </div>
+  </div>
+  <div id="cause">
+    <div id="pagetitle">THE CAUSE</div>
+    <div class="content">
+      <div id="photos">
+        <div id="slides2"> <img src="imgs/slide1.jpg" alt=""> <img src="imgs/slide2.jpg" alt=""> <img src="imgs/slide3.jpg" alt=""> </div>
+      </div>
+      <div id="texts">
+        <div id="txtbox2" class="texts_contents"> MIT 13 JAHREN BEGANN ICH ZU MALEN UND HATTE MIT 16 JAHREN MEINE ERSTE AUSSTELLUNG. BIS HEUTE BIN ICH IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.PASSIONIERTER MALER - WOHL BEMERKT MIT EINIGEN UNTERBRÜCHEN, 132 13 132 321321 321 3 DA ICH ES IMMER ALS HOBBY AUSÜBTE. DIE FARBEN, MATERIALIEN UND INSPIRATION SCHÖPFE ICH AUS DEN STEPPEN UND WÜSTEN AFRIKAS ODER ASIENS. DESHAL fd343 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 45345B IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.X XXXXXX XXXX XXXXX </div>
+      	<a href="#" id="a_totop" class="to-top"><img src="imgs/tree_small_brown.png" alt=""></a>
       </div>
     </div>
-    <div id="exibition">
-      <div id="pagetitle">THE EXIBITION</div>
-      <div class="content">
-        <div id="photos">
-          <div id="slides3">
-            <img src="imgs/slide1.jpg" alt="">
-            <img src="imgs/slide2.jpg" alt="">
-            <img src="imgs/slide3.jpg" alt="">
-            <!--<a href="#" class="slidesjs-previous slidesjs-navigation"><</a>
-            <a href="#" class="slidesjs-next slidesjs-navigation">></a>-->
-          </div>
-          
-        </div>
-        <div id="texts">
-          <div class="texts_contents">
-            RD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.
-          </div>
+  </div>
+  <div id="exibition">
+    <div id="pagetitle">THE EXIBITION</div>
+    <div class="content">
+      <div id="photos">
+        <div id="slides3"> <img src="imgs/slide1.jpg" alt=""> <img src="imgs/slide2.jpg" alt=""> <img src="imgs/slide3.jpg" alt=""> 
+          <!--<a href="#" class="slidesjs-previous slidesjs-navigation"><</a>
+            <a href="#" class="slidesjs-next slidesjs-navigation">></a>--> 
         </div>
       </div>
+      <div id="texts">
+        <div id="txtbox3" class="texts_contents"> MIT 13 JAHREN BEGANN ICH ZU MALEN UND HATTE MIT 16 JAHREN MEINE ERSTE AUSSTELLUNG. BIS HEUTE BIN ICH IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.PASSIONIERTER MALER - WOHL BEMERKT MIT EINIGEN UNTERBRÜCHEN, 132 13 132 321321 321 3 DA ICH ES IMMER ALS HOBBY AUSÜBTE. DIE FARBEN, MATERIALIEN UND INSPIRATION SCHÖPFE ICH AUS DEN STEPPEN UND WÜSTEN AFRIKAS ODER ASIENS. DESHAL fd343 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 4534543 345 35 3 5 3453 45345B IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.IKAS ODER ASIENS. DESHALB IST DIE FARBSKALA MEINER BILDER EHER IN ERD- UND PATINATÖNEN ALS IN KNALLIGEM ROT ODER GRÜN ANZUSIEDELN.X XXXXXX XXXX XXXXX </div>
+       	<a href="#" id="a_totop" class="to-top"><img src="imgs/tree_small_orange.png" alt=""></a>
+     </div>
     </div>
-    <div id="contact">
-      <div id="pagetitle">CONTACT</div>
-      <div class="content">
-      </div>
+  </div>
+  <div id="contact">
+    <div id="pagetitle">CONTACT</div>
+    <div class="content">
+      <form id="form-contact" class="formular" method="post" action="formsubmit.php">
+        <input type="text" id="form_name" name="form_name" class="text-input required default" onfocus="if(this.value == 'NAME') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'NAME'; }" value="NAME" />
+        <input type="text" id="formvor_name" name="formvor_name" class="text-input required default" onfocus="if(this.value == 'VORNAME') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'VORNAME'; }" value="VORNAME" />
+        <input type="text" id="form_email" name="form_email" class="text-input required email default" onfocus="if(this.value == 'EMAIL') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'EMAIL'; }" value="EMAIL" />
+        <textarea id="form_nachricht" name="form_nachricht" class="text-input" onFocus="if(this.value == 'NACHRICHT') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'NACHRICHT'; }">NACHRICHT</textarea>
+        <input class="btn-submit" type="submit" name="submit" id="submit" value="SEND" />
+      </form>
     </div>
   </div>
 </div>
-<div id="footer"></div>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+</div>
+<div id="footer">
+  <p>© Jürg Opprecht - Made by FEW</p>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
 <script type="text/javascript" src="js/jquery.slides.min.js"></script> 
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/jquery.mouseSwipe.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="js/jquery.mouseSwipe.js"></script> 
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="js/scrollbar.js"></script> 
 <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

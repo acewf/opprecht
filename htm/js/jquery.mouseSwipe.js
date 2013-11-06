@@ -16,8 +16,15 @@ var edge, sliderLT, sliderLen, _mouseDown = false, ie = false, hasTouch = false,
 var startAnimFrame=false, slideInterval=null;
 
 if (o.HORIZ==true) {
-  var sliderW = parseInt(panel.css('width'),10) * panel.length;
-  VIEWPORT=vw; edge='left'; panel.css('float','left'); plugin.css('width',sliderW); sliderLen = sliderW;
+	if(panel.length%2){
+		var sliderW = (parseInt(panel.css('width'),10) * panel.length)/2+parseInt(panel.css('width'),10);
+		VIEWPORT=vw+(parseInt(panel.css('width'),10)/2); 
+	}
+	else {
+		var sliderW = (parseInt(panel.css('width'),10) * panel.length)/2;
+		VIEWPORT=vw; 
+	}
+  edge='left'; panel.css('float','left'); plugin.css('width',sliderW); sliderLen = sliderW;
   plugin.after("<div class='navLeft'></div><div class='navRight'></div>");
 } else {
   var sliderH = parseInt(panel.css('height'),10) * panel.length;
@@ -48,7 +55,7 @@ var mouseswipe=function(sliderLT) {
 
 var panelswipe=function(sliderLT) {
   if (o.HORIZ==true) { len = vw; a = 'left'; } else { a='top'; len = vh; }
-  panelnum = Math.ceil(Math.abs((sliderLT/panel.length) / (len/panel.length)));
+  panelnum = Math.ceil(Math.abs((sliderLT/panel.length) / (len/panel.length))); 
   if (_lastMouseDownXY-_mouseDownXY <= -(o.SNAPDISTANCE)) {
       if (panelnum >= panel.length) { panelnum=panel.length-1; }
       animate(a,-len * panelnum,len);

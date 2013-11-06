@@ -5,6 +5,7 @@
     #slides3 {
       display: none;
       margin-bottom:0px;
+	  
     }
 
     .slidesjs-navigation {
@@ -23,8 +24,8 @@
 
     .slidesjs-pagination {
       position:absolute;
-	  bottom:10px;right:10px;
-      list-style: none;z-index:110;
+	  top:570px;right:10px;
+      list-style: none;z-index:10;
     }
 
     .slidesjs-pagination li {
@@ -63,12 +64,3 @@
   
   
   
-  
-  
-    #slides {
-      display: none;
-    }
-
-    .container {
-      margin: 0 auto
-    }
