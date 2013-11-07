@@ -1,4 +1,4 @@
-<?php
+<<?php
 /**
  * The template for displaying all pages
  *
@@ -11,14 +11,12 @@
  * @since Twenty Thirteen 1.0
  */
 
-get_header(); ?>
-
+/*get_header();*/ ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-			<div>XXXXXXXXX<br>MMMMMMMMMMMMMMMM</div>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
@@ -46,5 +44,5 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php /*get_sidebar();*/ ?>
+<?php /*get_footer();*/ ?>

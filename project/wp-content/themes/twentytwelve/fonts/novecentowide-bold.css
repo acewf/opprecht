@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NovecentowideBold';
+    src: url('novecentowide-bold.eot');
+    src: url('novecentowide-bold.eot') format('embedded-opentype'),
+         url('novecentowide-bold.woff') format('woff'),
+         url('novecentowide-bold.ttf') format('truetype'),
+         url('novecentowide-bold.svg#NovecentowideBold') format('svg');
+}
