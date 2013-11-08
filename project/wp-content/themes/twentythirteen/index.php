@@ -21,24 +21,32 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 ?>
 <?php	get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-			<div>INIT POST</div>
-		<?php if ( have_posts() ) : ?>
+	<?php 
+		$page_data = get_page_by_title('Wellcomescreen'); 
+		//echo get_the_post_thumbnail( $page_data->ID, 'full' );
+		$thumb_id = get_post_thumbnail_id($page_data->ID);
+		$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+		$content = apply_filters('the_content', $page_data->post_content); 
+		$title = $page_data->post_title; 
+	?>
+	<div id="home">
+		<img src="<?php echo $thumb_url[0]; ?>" class="image"/>
+    	<div id="text"><?php echo $content; ?></div>
+  </div>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+<?php if ( have_posts() ) : ?>
+	<?php /* The loop */ ?>
+	<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+		<div class="entry-thumbnail">
+			<?php the_post_thumbnail('full');  ?>
+		</div>
+	<?php endif; ?>
+	<?php /*twentythirteen_paging_nav();*/ ?>
 
-			<?php twentythirteen_paging_nav(); ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-		<div>END POST</div>
-		</div><!-- #content -->
-	</div><!-- #primary -->
+<?php else : ?>
+	<?php get_template_part( 'content', 'none' ); ?>
+<?php endif; ?>
+<div>END POST</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

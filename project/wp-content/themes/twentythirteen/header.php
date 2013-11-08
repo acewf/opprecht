@@ -45,18 +45,11 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		
-		<header id="masthead" class="site-header" role="banner">
-			<div id="navbar" class="navbar">
-				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
-					<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
+				<nav id="site-navigation" role="navigation">
 					<div id="menu">
 					  <button id="menu_show_hide"> </button>
-					  <div class="target">
-						<?php wp_nav_menu( array( 'Navigation Menu' => 'menutitle' ) ); ?>
-		 			</div>
+						<?php wp_nav_menu( array( 'Navigation Menu' => 'menutitle','container'  => false, 'items_wrap'      => '%3$s', 'walker' => new Custom_Walker_Nav_Menu ) ); ?>
 		 			</div>
 				</nav><!-- #site-navigation -->
-			</div><!-- #navbar -->
-		</header><!-- #masthead -->
 
 		<div id="main" class="site-main">

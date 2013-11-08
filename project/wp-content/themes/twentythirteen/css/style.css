@@ -6,16 +6,16 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 
 #menu{position:fixed;top:0;left:0;z-index:100;}
 #menu_show_hide{width:91px;height:88px;background:#e1a93c url(../imgs/icons_sprite.png) 0px 0px no-repeat;border:0;float:left;}
-#menu .target{height:88px;line-height:88px;vertical-align:middle;background:#fff;opacity:0.8;filter:alpha(opacity=80);float:left;}
-#menu .target li{float:left;}
-#menu .target a{padding:0 25px;font-size:100%;text-decoration:none;color:#31231D;}
-
+#menu-menu-title {height:88px;line-height:88px;vertical-align:middle;background:#fff;opacity:0.8;filter:alpha(opacity=80);float:left;}
+#menu-menu-title li{float:left;}
+#menu-menu-title a{padding:0 25px;font-size:100%;text-decoration:none;color:#31231D;}
+.menu-menu-title-container {float:left;}
 
 
 
 #home{position:relative;height:100%;}
 #home_img{position:absolute;z-index:0;margin:auto;}
-#home #text{color:#E0A93B;font-size:8.9em;padding-top:250px;padding-left:84px;position:absolute;top:0;left:0;z-index:10;}
+#home #text{color:#E0A93B;font-size:8.9em;padding-top:250px;padding-left:84px;position:absolute;top:0;left:0;z-index:10;line-height: 100%;}
 .image{width:100%;}
 
 
