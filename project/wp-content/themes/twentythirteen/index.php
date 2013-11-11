@@ -109,10 +109,12 @@ function getContentByID($a){
         </ul>
 	  </div>
 	  <div id="texts">
-	    <div id="txtbox1" class="texts_contents"><?php echo nl2br($objArtis->content); ?></div>
-	  	<a href="#home" id="a_totop" class="to-top">
-	  		<img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_orange.png" alt="">
-	  	</a>
+	  	<div class="groupdata">
+	    	<div id="txtbox1" class="texts_contents"><?php echo nl2br($objArtis->content); ?></div>
+	  		<a href="#home" id="a_totop" class="to-top">
+	  			<img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_orange.png" alt="">
+	  		</a>
+	  	</div>
 	  </div>
 	</div>
 </div>
@@ -134,9 +136,11 @@ function getContentByID($a){
         </ul>
 	  </div>
 	  <div id="texts">
-	    <div id="txtbox1" class="texts_contents"><?php echo nl2br($objCause->content); ?></div>
-	  	<a href="#home" id="a_totop" class="to-top"><img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_brown.png" alt=""></a>
-	  </div>
+	  	<div class="groupdata">
+	    	<div id="txtbox1" class="texts_contents"><?php echo nl2br($objCause->content); ?></div>
+	  		<a href="#home" id="a_totop" class="to-top"><img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_brown.png" alt=""></a>
+	  	</div>
+		</div>
 	</div>
 </div>
 <div id="exibition">
@@ -157,9 +161,11 @@ function getContentByID($a){
         </ul>
 	  </div>
 	  <div id="texts">
-	    <div id="txtbox1" class="texts_contents"><?php echo nl2br($objExibition->content); ?></div>
-	  	<a href="#home" id="a_totop" class="to-top"><img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_orange.png" alt=""></a>
-	  </div>
+	  	<div class="groupdata">
+	    	<div id="txtbox1" class="texts_contents"><?php echo nl2br($objExibition->content); ?></div>
+	  		<a href="#home" id="a_totop" class="to-top"><img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_orange.png" alt=""></a>
+	  	</div>
+		</div>
 	</div>
 </div>
 

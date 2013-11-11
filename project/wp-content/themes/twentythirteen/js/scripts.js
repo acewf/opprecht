@@ -6,6 +6,7 @@ itemsReferenc.theartist = "#artist";
 itemsReferenc.thecause = "#cause";
 itemsReferenc.theexhibition = "#exibition";
 itemsReferenc.contact = "#contact";
+
 engine.hashchange =  function (e,hashvalue) {
 		if (e!=null) {e.preventDefault();};
 	    var target = hashvalue,
@@ -57,16 +58,16 @@ $(document).ready(function() {
 	$('.slide_area').each(function() {
 	   	var allimages = $(this).find('.slide_img');
 	   	if(allimages.length>1){
-	   		var newHTML = '<li class="imgs_control" value="-1"><</li>';
+	   		var newHTML = '<li id="prev" class="imgs_control" value="-1"><</li>';
 		   	for(var i=0;i<allimages.length;i++){
 		   		if(i==0){
-		   			newHTML += '<li class="imgs_control_active" value="'+i+'">'+(i+1)+'</li>';
+		   			newHTML += '<li class="imgs_control imgs_control_active" value="'+i+'"></li>';
 		   		} else {
-		   			newHTML += '<li class="imgs_control" value="'+i+'">'+(i+1)+'</li>';
+		   			newHTML += '<li class="imgs_control" value="'+i+'"></li>';
 		   		}
 		   		
 		   	}
-		   	newHTML +=  '<li class="imgs_control" value="1">></li>';
+		   	newHTML +=  '<li id="next" class="imgs_control" value="1">></li>';
 	   		var imgs_controllers = $(this).parent();
 	   		var imgs_controllersClass = imgs_controllers.find('.imgs_controllers');
 	   		imgs_controllersClass.html(newHTML);
@@ -75,8 +76,27 @@ $(document).ready(function() {
    	$('.imgs_control').click(function(event) {
    		var imgs_controllers = $(this).parent();
    		var total = imgs_controllers.find('li');
-   		console.log("image+++",total.length-2);
-   		console.log(imgs_controllers);
+   		var activeElement = imgs_controllers.find('.imgs_control_active');
+   		var active = activeElement[0];
+   		var nrgo = 0;
+   		activeElement.removeClass("imgs_control_active");
+   		if ((this.id=="next") || (this.id=="prev")) {
+   			nrgo = active.value+this.value;
+   			if (nrgo<0) {
+   				nrgo = 0;
+   			};
+   			if (nrgo>total-1) {
+   				nrgo = total;
+   			};
+   			console.log(activeElement);
+   		} else {
+			nrgo = this.value;
+			console.log(this);
+			$(this).addClass("imgs_control_active");
+   		}
+   		
+   		
+   		console.log(nrgo);
 
    	});
 
