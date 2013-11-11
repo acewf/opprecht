@@ -96,19 +96,23 @@ function getContentByID($a){
 <div id="pagetitle">THE ARTIST</div>
 	<div class="content">
 	  <div id="photos">
-	    <div id="slides"> 
-	    	<img src="<?php echo $objArtis->thumb_url[0]; ?>" alt="">
+	    <div id="slides"  class="slide_area"> 
+	    	<img src="<?php echo $objArtis->thumb_url[0]; ?>" class="slide_img" alt="">
 	    	<?php
 	    	for ($i=0; $i<sizeof($objArtis->custom['wpcf-image-to-gallery']); $i++) {
 	    		$item = $objArtis->custom['wpcf-image-to-gallery'][$i];
-			    echo '<img src="'.$item .'" alt="">';
+			    echo '<img src="'.$item .'" alt="" class="slide_img">';
 			}
 			?>
 	    </div>
+	     <ul class="imgs_controllers"  value="0">
+        </ul>
 	  </div>
 	  <div id="texts">
 	    <div id="txtbox1" class="texts_contents"><?php echo nl2br($objArtis->content); ?></div>
-	  	<a href="#home" id="a_totop" class="to-top"><img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_orange.png" alt=""></a>
+	  	<a href="#home" id="a_totop" class="to-top">
+	  		<img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_orange.png" alt="">
+	  	</a>
 	  </div>
 	</div>
 </div>
@@ -117,15 +121,17 @@ function getContentByID($a){
 <div id="pagetitle">THE CAUSE</div>
 	<div class="content">
 	  <div id="photos">
-	    <div id="slides"> 
-	    	<img src="<?php echo $objCause->thumb_url[0]; ?>" alt="">
+	    <div id="slides"  class="slide_area"> 
+	    	<img src="<?php echo $objCause->thumb_url[0]; ?>" alt="" class="slide_img">
 	    	<?php
 	    	for ($i=0; $i<sizeof($objCause->custom['wpcf-image-to-gallery']); $i++) {
 	    		$item = $objCause->custom['wpcf-image-to-gallery'][$i];
-			    echo '<img src="'.$item .'" alt="">';
+			    echo '<img src="'.$item .'" alt="" class="slide_img">';
 			}
 			?>
 	    </div>
+	    <ul class="imgs_controllers" value="0">
+        </ul>
 	  </div>
 	  <div id="texts">
 	    <div id="txtbox1" class="texts_contents"><?php echo nl2br($objCause->content); ?></div>
@@ -138,15 +144,17 @@ function getContentByID($a){
 <div id="pagetitle">THE EXIBITION</div>
 	<div class="content">
 	  <div id="photos">
-	    <div id="slides"> 
-	    	<img src="<?php echo $objExibition->thumb_url[0]; ?>" alt="">
+	    <div id="slides"  class="slide_area"> 
+	    	<img src="<?php echo $objExibition->thumb_url[0]; ?>" alt="" class="slide_img">
 	    	<?php
 	    	for ($i=0; $i<sizeof($objExibition->custom['wpcf-image-to-gallery']); $i++) {
 	    		$item = $objExibition->custom['wpcf-image-to-gallery'][$i];
-			    echo '<img src="'.$item .'" alt="">';
+			    echo '<img src="'.$item .'" alt="" class="slide_img">';
 			}
 			?>
 	    </div>
+	    <ul class="imgs_controllers"  value="0">
+        </ul>
 	  </div>
 	  <div id="texts">
 	    <div id="txtbox1" class="texts_contents"><?php echo nl2br($objExibition->content); ?></div>
