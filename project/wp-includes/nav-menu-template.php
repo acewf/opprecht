@@ -42,7 +42,7 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
 		$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
 
-		$atts['href'] = "#";
+		$atts['href'] = "#".$item->title;
 
 		/**
 		 * Filter the HTML attributes applied to a menu item's <a>.

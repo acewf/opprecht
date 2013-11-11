@@ -39,17 +39,15 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
-	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-	<div id="page" class="hfeed site">
-		
-				<nav id="site-navigation" role="navigation">
-					<div id="menu">
-					  <button id="menu_show_hide"> </button>
-						<?php wp_nav_menu( array( 'Navigation Menu' => 'menutitle','container'  => false, 'items_wrap'      => '%3$s', 'walker' => new Custom_Walker_Nav_Menu ) ); ?>
-		 			</div>
-				</nav><!-- #site-navigation -->
-
-		<div id="main" class="site-main">
+<body>
+<div id="menu">
+ 	 <a href="#home" class="linkit" id="menu_show_hide"></a>
+ 	 <div class="target">
+	 	 <ul>
+			<?php wp_nav_menu( array( 'Navigation Menu' => 'menutitle','container'  => false, 'items_wrap'      => '%3$s', 'walker' => new Custom_Walker_Nav_Menu ) ); ?>
+		</ul>
+	</div>
+</div>
+<div id="wraper">
