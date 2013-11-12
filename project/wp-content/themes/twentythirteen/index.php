@@ -49,19 +49,17 @@ function getContentByID($a){
     <div id="pagetitle">THE PAINTING</div>
     <div class="content">
       <div id="viewport2" onselectstart="return false;">
-      	<div class="dragpaints">
+      	<div id="dragmove" class="dragpaints">
       	<ul id="mouseSwipeScroll">
-      		<?php $totalPost = 0; ?>
-      		<?php $divopen = 0; ?>
-      		<?php $openelemtns = 0; ?>
-      		<?php $dateObj = array(); ?>
-      		<?php query_posts('posts_per_page=100'); ?>
       		<?php echo "<div class='groupdays'>"; ?>
-			<?php if ( have_posts() ) : ?>
-				<?php while ( have_posts() ) {
-						$thePost = the_post();
-					?>
-					<?php 					
+      		<?php $totalPost = 0;
+      		$divopen = 0;
+      		$openelemtns = 0;
+      		$dateObj = array();
+      		query_posts('posts_per_page=100');      		
+			if ( have_posts() ) : 
+				while ( have_posts() ) {
+						$thePost = the_post();					
 						if ($openelemtns==2) {
 								echo "</div>";
 								echo "<div class='groupdays'>";
@@ -69,24 +67,18 @@ function getContentByID($a){
 														
 						}
 						$openelemtns++;
-						
-
-					?>
-					<?php $totalPost++; ?>
-					<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-					<?php $datapostyear = get_the_date( 'Y' ); ?>
-					<?php 
-						
+					$totalPost++;
+					if ( has_post_thumbnail() && ! post_password_required() ) : 
+					$datapostyear = get_the_date( 'Y' );
 						if($dateObj[$datapostyear]>=0){
 							$dateObj[$datapostyear] = $dateObj[$datapostyear]+1;
 						} else {
 							$dateObj[$datapostyear] = 0;
 						}
 						
-					 ?>
-					<?php $datapostmes = get_the_date( 'm' ); ?>
-					<?php $datapostday = get_the_date( 'd' ); ?>
-					<?php $valuePost = getContentByID($thePost->ID); ?>
+					$datapostmes = get_the_date( 'm' ); 
+					$datapostday = get_the_date( 'd' ); 
+					$valuePost = getContentByID($thePost->ID); ?>
 					<li class="panel" data-year="<?php echo $datapostyear; ?>" data-mes="<?php echo $datapostmes; ?>" data-dia="<?php echo $datapostday; ?>"> 
 						<div class="img_wraper">
 						<div class="imagecontent">

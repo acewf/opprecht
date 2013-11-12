@@ -87,6 +87,7 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 .imageresize{
 	z-index: 3;
 	position: absolute;
+	width: 100%;
 }
 .imagerinvisible{
 	z-index: 2;
