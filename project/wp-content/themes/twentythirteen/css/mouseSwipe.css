@@ -6,7 +6,7 @@
 #viewport2 {
 	position: relative;
 	width: 100%;
-	height: 100%;
+	height: 680px;
 	margin: 0px;
 	overflow: hidden;
 }
@@ -14,11 +14,10 @@
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	position: relative;
-	width: 100%;
 	height: 100%;
 	margin: 0px;
 	float: left;column-width: 340px;
-	width: 200%;
+	width: 300%;
 }
 .navLeft, .navRight, .navTop, .navBottom {
 	position: absolute;
@@ -29,6 +28,7 @@
 }
 #mouseSwipeScroll li{
 	position:relative;overflow:hidden;display: block ;
+	float: none;
 }
 .overlay{cursor: url(../imgs/grab.png), pointer;position: absolute;top:0;text-align:center;width: 100%;height: 100%;z-index: 90;display:none;}
 .background{

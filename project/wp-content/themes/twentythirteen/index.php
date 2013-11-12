@@ -34,7 +34,14 @@ function getContentByID($a){
 
 	<?php $objWelcome = getContentByTitle('Wellcomescreen'); ?>
 	<div id="home">
-		<img src="<?php echo $objWelcome->thumb_url[0]; ?>" class="image"/>
+		<div class="imagecontainer">
+			<div class="imageresize">
+				<img src="<?php echo $objWelcome->thumb_url[0]; ?>" class="image">
+			</div>
+			<div class="imagerinvisible">
+				<img src="<?php echo $objWelcome->thumb_url[0]; ?>" class="image">
+			</div>
+		</div>
     	<div id="text"><?php echo $objWelcome->content; ?></div>
   </div>
 <!-- -->
@@ -42,14 +49,41 @@ function getContentByID($a){
     <div id="pagetitle">THE PAINTING</div>
     <div class="content">
       <div id="viewport2" onselectstart="return false;">
+      	<div class="dragpaints">
       	<ul id="mouseSwipeScroll">
+      		<?php $totalPost = 0; ?>
+      		<?php $divopen = 0; ?>
+      		<?php $openelemtns = 0; ?>
+      		<?php $dateObj = array(); ?>
       		<?php query_posts('posts_per_page=100'); ?>
+      		<?php echo "<div class='groupdays'>"; ?>
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) {
 						$thePost = the_post();
 					?>
+					<?php 					
+						if ($openelemtns==2) {
+								echo "</div>";
+								echo "<div class='groupdays'>";
+								$openelemtns = 0;
+														
+						}
+						$openelemtns++;
+						
+
+					?>
+					<?php $totalPost++; ?>
 					<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 					<?php $datapostyear = get_the_date( 'Y' ); ?>
+					<?php 
+						
+						if($dateObj[$datapostyear]>=0){
+							$dateObj[$datapostyear] = $dateObj[$datapostyear]+1;
+						} else {
+							$dateObj[$datapostyear] = 0;
+						}
+						
+					 ?>
 					<?php $datapostmes = get_the_date( 'm' ); ?>
 					<?php $datapostday = get_the_date( 'd' ); ?>
 					<?php $valuePost = getContentByID($thePost->ID); ?>
@@ -83,10 +117,40 @@ function getContentByID($a){
 		          	</li>
 					<?php endif; ?>
 				<?php
-
 				 }; ?>
 			<?php endif; ?>
+			<?php 
+					echo "</div>";
+			?>
 		</ul>
+		</div>
+  		</div>
+  		<div class="years">
+	  		<?php 
+  			$MarkersSize = array();
+  			$Markershtml = array();
+  			foreach ($dateObj as $key => $value) {
+  				$percent =  round (($value/$totalPost)*100);
+  				$insideYear = "<div class='year_inside'>".$key."</div>";
+  				array_push($MarkersSize, $percent);
+  				array_push($Markershtml, "<div class='year_slide' style='width:".$percent."%'>".$insideYear."</div>");
+  			}
+  			?>
+  			<div id="drag_over" class="slidedragger_over" style="width:<?php echo $MarkersSize[0]; ?>%">
+  				<a href="#home" class="to-top-inyear" style="-webkit-transform: scale(1);">
+	  			<img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_orange.png" alt="">
+	  		</a></div>
+  			<div class="upslidedragger">
+  			<?php 
+  			foreach ($Markershtml as $key => $value) {
+  				echo $value;
+  			}
+  			?>
+  			</div>
+  			<div id="drag_under"  class="slidedragger" style="width:<?php echo $MarkersSize[0]; ?>%">
+  				<a href="#home" class="to-top-inyear" style="-webkit-transform: scale(1);">
+	  			<img src="<?php echo get_template_directory_uri(); ?>/imgs/tree_small_orange.png" alt="">
+	  		</a></div>
   		</div>
 	</div>
 </div>
@@ -97,11 +161,11 @@ function getContentByID($a){
 	<div class="content">
 	  <div id="photos">
 	    <div id="slides"  class="slide_area"> 
-	    	<img src="<?php echo $objArtis->thumb_url[0]; ?>" class="slide_img" alt="">
+	    	<img src="<?php echo $objArtis->thumb_url[0]; ?>" class="slide_img" alt="" style="z-index:2">
 	    	<?php
 	    	for ($i=0; $i<sizeof($objArtis->custom['wpcf-image-to-gallery']); $i++) {
 	    		$item = $objArtis->custom['wpcf-image-to-gallery'][$i];
-			    echo '<img src="'.$item .'" alt="" class="slide_img">';
+			    echo '<img src="'.$item .'" alt="" class="slide_img" style="z-index:1">';
 			}
 			?>
 	    </div>
@@ -124,11 +188,11 @@ function getContentByID($a){
 	<div class="content">
 	  <div id="photos">
 	    <div id="slides"  class="slide_area"> 
-	    	<img src="<?php echo $objCause->thumb_url[0]; ?>" alt="" class="slide_img">
+	    	<img src="<?php echo $objCause->thumb_url[0]; ?>" alt="" class="slide_img" style="z-index:2">
 	    	<?php
 	    	for ($i=0; $i<sizeof($objCause->custom['wpcf-image-to-gallery']); $i++) {
 	    		$item = $objCause->custom['wpcf-image-to-gallery'][$i];
-			    echo '<img src="'.$item .'" alt="" class="slide_img">';
+			    echo '<img src="'.$item .'" alt="" class="slide_img" style="z-index:1">';
 			}
 			?>
 	    </div>
@@ -149,11 +213,13 @@ function getContentByID($a){
 	<div class="content">
 	  <div id="photos">
 	    <div id="slides"  class="slide_area"> 
-	    	<img src="<?php echo $objExibition->thumb_url[0]; ?>" alt="" class="slide_img">
+	    	<img src="<?php echo $objExibition->thumb_url[0]; ?>" alt="" class="slide_img" style="z-index:2">
+
 	    	<?php
+	    	echo sizeof($objExibition->custom['wpcf-image-to-gallery']);
 	    	for ($i=0; $i<sizeof($objExibition->custom['wpcf-image-to-gallery']); $i++) {
 	    		$item = $objExibition->custom['wpcf-image-to-gallery'][$i];
-			    echo '<img src="'.$item .'" alt="" class="slide_img">';
+			    echo '<img src="'.$item .'" alt="" class="slide_img" style="z-index:1">';
 			}
 			?>
 	    </div>

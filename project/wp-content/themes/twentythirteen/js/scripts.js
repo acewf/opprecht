@@ -6,6 +6,66 @@ itemsReferenc.theartist = "#artist";
 itemsReferenc.thecause = "#cause";
 itemsReferenc.theexhibition = "#exibition";
 itemsReferenc.contact = "#contact";
+var itemsZindex = 2;
+
+window.onscroll = function (event) {
+	if (window.pageYOffset<800) {
+		var value = Math.round(window.pageYOffset/2.5);
+		var imgvalue = window.innerHeight -Math.round(window.pageYOffset/1.5);
+		/*
+		var percent = window.pageYOffset/600;
+		var alpha = 1-percent;
+		*/
+		$("#text").css({"margin-top":value});
+		$(".imageresize").css({"height":imgvalue});
+		$(".imageresize").css({"margin-top":value});
+	};
+}
+engine.startMovePoint = 0;
+engine.addListeners = function(){
+	var div = document.getElementById('drag_over');
+	div.style.cursor = 'move';
+    document.getElementById('drag_over').addEventListener('mousedown', engine.mouseDown, false);
+    window.addEventListener('mouseup', engine.mouseUp, false);
+}
+
+engine.mouseUp = function()
+{
+    window.removeEventListener('mousemove', engine.divMove, true);
+}
+
+engine.mouseDown = function(e){
+  window.addEventListener('mousemove', engine.divMove, true);
+  engine.startMovePoint = e.clientX;
+}
+engine.divMove = function(e){
+	
+	var div = document.getElementById('drag_over');
+	var drag_under = document.getElementById('drag_under');
+	div.style.position = 'absolute';
+	div.style.cursor = 'move';
+	drag_under.style.position = 'absolute';
+
+	var drg_w = $("#drag_over").outerWidth();
+	var pos_x =  e.pageX - $("#drag_over").offset().left;
+	console.log($("#drag_over").offset().left , drg_w , e.pageX);
+	var leftgo = pos_x ;//+ pos_x - drg_w;//body_w
+
+	//$("#drag_over").offset({left:leftgo})
+
+	console.log(leftgo);
+	/*
+	if(leftgo>(document.body.clientWidth-drg_w)){
+		leftgo=(document.body.clientWidth-drg_w);
+	}
+	if(leftgo<0){
+		leftgo=0;
+	}
+	*/
+	div.style.left = leftgo + 'px';
+	drag_under.style.left = leftgo+ 'px';
+	
+}
 
 engine.hashchange =  function (e,hashvalue) {
 		if (e!=null) {e.preventDefault();};
@@ -18,28 +78,51 @@ engine.hashchange =  function (e,hashvalue) {
 	    });
 }
 $(document).ready(function() {
+	engine.addListeners();
+	var elem = document;
+    if (elem.addEventListener) {    // all browsers except IE before version 9
+            // Internet Explorer, Opera, Google Chrome and Safari
+        elem.addEventListener ("mousewheel", window.onscroll, false);
+            // Firefox
+        elem.addEventListener ("DOMMouseScroll", window.onscroll, false);
+    }
+    else {
+        if (elem.attachEvent) { // IE before version 9
+            elem.attachEvent ("onmousewheel", window.onscroll);
+        }
+    }
+
+    $( "body" ).mousemove(function( event ) {
+	  if(event.screenY<200){
+	  		 $(".target").show("slide",{direction:"left"},100);
+	  } else {
+	  	 $(".target").hide("slide",{direction:"left"},100);
+	  }
+	});
+
+
+
+
 	$('a[href^="#"]').on('click',function (e) {
 		var lowerString = this.hash.toLowerCase();
 	    engine.hashchange(e,itemsReferenc[lowerString.substring(1,lowerString.length)]);
 	});
 
-	/* menu slide */	
-    $("#menu").mouseover(function(){
-        $(".target").show("slide",{direction:"left"},100);
+	/* menu slide */
+    $('.texts_contents').each(function() {
+    	var parent = $(this).parent();
+    	console.log($(this).height(),parent.height())
+    	if($(this).height()>parent.height()+10){
+			//$(this).perfectScrollbar();
+    	}
     });
-    $(".linkit").click(function(){
-		$(".target").hide("slide",{direction:"left"},100);
+
+    /*
+    $('.slidedragger_over').bind("dragstart", function() { 
+    	console.log('++++')
+    	return false; 
     });
-	$("#menu").mouseleave(function(){
-        $(".target").hide("slide",{direction:"left"},100);
-    });
-    $('.texts_contents').perfectScrollbar();
-    $(document).bind("dragstart", function() { return false; });
-    $('#mouseSwipeScroll').swipe({
-	    TYPE:'mouseSwipe',
-	    SNAPDISTANCE:340,
-	    HORIZ: true
-	});
+	*/
 	$('.mouseSwipeScroll-image').each(function() {
    		var ratio = this.width/this.height;
    		if (ratio>1) {
@@ -58,7 +141,7 @@ $(document).ready(function() {
 	$('.slide_area').each(function() {
 	   	var allimages = $(this).find('.slide_img');
 	   	if(allimages.length>1){
-	   		var newHTML = '<li id="prev" class="imgs_control" value="-1"><</li>';
+	   		var newHTML = '<li id="prev" class="imgs_control" value="-1"><span><<span></li>';
 		   	for(var i=0;i<allimages.length;i++){
 		   		if(i==0){
 		   			newHTML += '<li class="imgs_control imgs_control_active" value="'+i+'"></li>';
@@ -67,7 +150,7 @@ $(document).ready(function() {
 		   		}
 		   		
 		   	}
-		   	newHTML +=  '<li id="next" class="imgs_control" value="1">></li>';
+		   	newHTML +=  '<li id="next" class="imgs_control" value="1"><span>><span></li>';
 	   		var imgs_controllers = $(this).parent();
 	   		var imgs_controllersClass = imgs_controllers.find('.imgs_controllers');
 	   		imgs_controllersClass.html(newHTML);
@@ -88,15 +171,25 @@ $(document).ready(function() {
    			if (nrgo>total-1) {
    				nrgo = total;
    			};
-   			console.log(activeElement);
+   			var next
+   			if (this.id=="next") {
+				next = activeElement.next();
+   			} else {
+				next = activeElement.prev();
+   			}
+   			
+   			next.addClass("imgs_control_active");
    		} else {
 			nrgo = this.value;
-			console.log(this);
 			$(this).addClass("imgs_control_active");
    		}
    		
-   		
-   		console.log(nrgo);
+   		var result = $(this).parent().parent().find('.slide_img');
+   		var item = result[nrgo];
+   		$(item).fadeOut(0);
+   		$(item).fadeIn( "slow");
+   		$(item).css({"z-index":itemsZindex,"position": 'absolute'});
+   		itemsZindex++;
 
    	});
 
@@ -142,7 +235,7 @@ $(document).ready(function() {
 /* form validations and submits
 http://www.designchemical.com/blog/index.php/jquery/create-your-own-jquery-ajax-form-submit-with-validation/
  */
-	var $loading = $('<div class="loading"><img src="loading.gif" alt="" /></div>');
+	var $loading = $('<div class="loading"><img alt="" /></div>');
 	$(".default").each(function(){
 		var defaultVal = $(this).attr('title');
 		$(this).focus(function(){
@@ -186,6 +279,4 @@ http://www.designchemical.com/blog/index.php/jquery/create-your-own-jquery-ajax-
 		}
 		e.preventDefault();
 	});
-  
 });
-

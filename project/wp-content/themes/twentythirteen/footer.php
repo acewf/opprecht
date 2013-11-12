@@ -8,7 +8,7 @@
 		<div id="overlay_close"></div>
         
         <div id="overlay_order" >
-            <div id="order_img"><img src="imgs/pre3.jpg" width="420" height="423" /></div>
+            <div id="order_img"><img  width="420" height="423" /></div>
             <div id="order_text">
                 <div id="txtbox4" class="texts_contents"> MIT 13 JAHREN BEGANN ICH ZU MALEN UND HATTE MIT 16 JAHREN</div>
                 <div id="overlay_order_bt">ORDER</div>
@@ -28,13 +28,15 @@
 	<div class="overlay_bg"></div>
 	
 </div>
-
-
+<!--
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.mouseSwipe.js"></script> 
+-->
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.1.min.js"></script> 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script> 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.slides.min.js"></script> 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.easing.1.3.js"></script> 
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.mouseSwipe.js"></script> 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.mousewheel.js"></script> 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scrollbar.js"></script> 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>

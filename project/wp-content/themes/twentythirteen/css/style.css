@@ -29,33 +29,109 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 	height: 420px;
 }
 
+.groupdays {
+	float: left;
+	width: 340px;
+}
+.years{
+	width: 100%;
+	height: 50px;
+	background-color: #E0A93B;
+}
+.year_slide{
+	height: 50px;
+	display: inline-block;
+	color: #fff;
+}
+.year_inside {
+	padding: 16px;
+	padding-left: 10%;
+}
+.upslidedragger{
+	width: 100%;
+	z-index: 5;
+	position: absolute;
+}
 
-#home{position:relative;height:100%;}
+.dragpaints{
+	height: 100%;
+	width: 300%;
+}
+
+.slidedragger{
+	height: 50px;
+	background-color: #31231D;
+	width: 33%;
+	min-width: 50px;
+	position: absolute;
+	z-index: 2;
+}
+.slidedragger_over{
+	height: 50px;
+	width: 33%;
+	min-width: 50px;
+	position: absolute;
+	z-index: 6;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.to-top-inyear {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.imageresize{
+	z-index: 3;
+	position: absolute;
+}
+.imagerinvisible{
+	z-index: 2;
+	position: relative;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+
+#home{position:relative;height:100%;overflow: hidden;}
 #home_img{position:absolute;z-index:0;margin:auto;}
 #home #text{color:#E0A93B;font-size:8.9em;padding-top:250px;padding-left:84px;position:absolute;top:0;left:0;z-index:10;}
 .image{width:100%;}
+.imagecontainer{width:100%;}
 
 
-#pagetitle{background-color:#FFF;text-align:center;vertical-align:middle;font-size:26px;color:#31231D;height:88px;line-height:100px;}
+#pagetitle{background-color:#FFF;text-align:center;vertical-align:middle;font-size:26px;color:#31231D;height:88px;line-height:88px;}
 
 
 .content{overflow: hidden;}
 
 #cause .content{background:#E0A93B;}
 #artist .content, #exibition .content{background:#31231D;}
-#contact .content{background-color:#FFF;}
+#contact .content{background-color:#FFF;height: 640px;}
 
-     #painting .content{height:680px;}
+#painting .content{height:730px;}
 
 #photos, #texts{width:50%;height:100%;float:left;position:relative;line-height: 140%;}
 #slides{
 	height: 100%;
 	position: relative;
 	overflow: hidden;
+	z-index: 4;
 }
 
 .panel, .img_wraper{width:340px;height:340px;}
-.img_wraper{min-height:340px;min-width:340px;overflow:hidden;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-0%, -50%);-ms-transform: translate(-50%, -50%);}
+.img_wraper{
+	min-height:340px;
+	min-width:340px;
+	overflow:hidden;
+	position: absolute;
+	left: 50%;top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);}
 
 .mouseSwipeScroll-image{width:100%;height:auto;
 	position: absolute;
@@ -63,7 +139,7 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 	top: 50%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-0%, -50%);
+	-moz-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 }
 .mouseSwipeScroll-image_ratio{width:auto;height:100%;
@@ -72,17 +148,31 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 	top: 50%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-0%, -50%);
+	-moz-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 }
 
-.imgs_controllers{position: absolute;bottom: 20px;right: 20px;}
-.imgs_control{float: left;margin: 0 1px;width:15px;height: 24px;background-color: #E0A93B;text-align: center;color: #fff;}
-.imgs_control_active {float: left;margin: 0 1px;width:15px;height: 24px;background-color: #E0A93B;text-align: center;color: #31241D;}
+.imgs_controllers{position: absolute;bottom: 20px;right: 30px;z-index: 5;}
+.imgs_control{float: left;margin: 0 3px;width:23px;height: 37px;background-color: #E0A93B;text-align: center;color: #fff;}
+.imgs_control_active {float: left;margin: 0 3px;width:23px;height: 37px;background-color: #E0A93B;text-align: center;color: #31241D;}
 .imgs_control:hover{background-color: #31241D;cursor: pointer;}
 .imgs_control_active {background-color: #fff;}
+.imgs_control span{
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 6px;
+}
 
-.texts_contents{color: #FFF;position: relative;margin: 50px auto;padding-right: 40px;width: 75%;height: 450px;overflow: hidden;}
+.groupdata{
+	position: relative;
+	margin: 50px auto;
+	padding-right: 40px;
+	width: 75%;
+	overflow: hidden;
+	height: 500px;
+}
+
+.texts_contents{color: #FFF;line-height:1.5em;height:auto;font-size: 1.5em;}
 
 #cause .ps-container:hover .ps-scrollbar-y-rail,
 #cause .ps-container.hover .ps-scrollbar-y-rail,
@@ -112,9 +202,9 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 #div_overlay .ps-container .ps-scrollbar-y-rail.hover .ps-scrollbar-y{ background-color: #31241D;}
 
 
-.to-top{position:absolute;bottom:50px;right:75px;}
+.to-top{position:absolute;bottom:0px;right:20px;}
 
-#slides img,#slides2 img,#slides3 img{width:100%;position:absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-0%, -50%);-ms-transform: translate(-50%, -50%);}
+#slides img,#slides2 img,#slides3 img{width:100%;position:absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);}
 
 .slidecontrols{position:absolute;top:0;right:0;}
 
@@ -141,16 +231,16 @@ html,body{height:100%;font-family:"NovecentowideBold";}
 }
 #form_name, #formvor_name{width:49%;}
 #formvor_name{position:absolute;right:0;}
-#form_nachricht{height:200px;padding-top:20px;margin-bottom:130px;}
+#form_nachricht{height:330px;padding-top:20px;margin-bottom:130px;}
 
-input#submit{width:255px;height:61px;background-color:#E1A93C;border:0;color:#FFF;font-family:inherit;position:absolute;right:-3px;bottom:50px;}
+input#submit{font-size: 22px;width:255px;height:61px;background-color:#E1A93C;border:0;color:#FFF;font-family:inherit;position:absolute;right:-3px;bottom:50px;}
 input#submit:hover{cursor:pointer;background-color:#31241D;}
 
 
 
 
 
-#footer{height:68px;background-color:#31231D;border-top:9px solid #e1a93c;}
+#footer{height:68px;background-color:#31231D;border-top:9px solid #e1a93c;margin-top: 25px;}
 #footer p{color:#FFF;font:0.8em Arial, Helvetica, sans-serif;text-align:right;margin:13px auto;width:75%;}
 
 
@@ -188,11 +278,10 @@ input#submit:hover{cursor:pointer;background-color:#31241D;}
 	 /* #slides, #slides2, #slides3{height:410px;position:relative;}*/
 	  .content{height:840px;}
 	  #photos, #texts{width:100%;height:410px;overflow: hidden;}
-     .texts_contents{height:100%;width:85%;margin:20px auto;}
+     .texts_contents{height:100%;margin:20px auto;}
      #contact .content{height:600px;}
 
 	 .formular{width:80%;}
-	 .to-top{bottom:0px;right:35px;}
 	 .slidesjs-pagination {bottom:10px;top: auto;}
 
 	  #mouseSwipeScroll{width: auto;height: 340px;}
@@ -211,7 +300,6 @@ input#submit:hover{cursor:pointer;background-color:#31241D;}
 	  #photos, #texts{width:100%;height:400px;overflow: hidden;}
      .texts_contents{height:100%;width:80%;margin:20px auto;}
 
-	 .to-top{bottom:3px;right:40px;}
 		
     }
 	
@@ -224,7 +312,6 @@ input#submit:hover{cursor:pointer;background-color:#31241D;}
 	  #photos, #texts{width:100%;height:400px;overflow: hidden;}
      .texts_contents{height:100%;width:85%;margin:20px auto;}
 
-	 .to-top{bottom:3px;right:35px;}
 	  
 		
 	}
@@ -238,7 +325,6 @@ input#submit:hover{cursor:pointer;background-color:#31241D;}
 	 .content{height:420px;position:relative;}
 	  
      #contact .content{height:600px;}
-	 .to-top{bottom: 15px;right:42px;}
 	 .slidesjs-pagination {bottom:10px;top: auto;}
     }
 
@@ -248,12 +334,10 @@ input#submit:hover{cursor:pointer;background-color:#31241D;}
 	  .content{height:495px;position:relative;}
      #contact .content{height:600px;}
 	  .slidesjs-pagination {bottom: auto;top:95%;}
-	 .to-top{bottom: 15px;right:50px;}
 		
 	}
 /* For larger displays */
     @media (min-width: 1200px) {
-      .texts_contents{height: 500px;}
 	  .slidesjs-pagination {bottom: auto;top:95%;}
 	  .content{height: 600px;position:relative;}
 	  
@@ -267,7 +351,7 @@ input#submit:hover{cursor:pointer;background-color:#31241D;}
 	  }
     }
     @media (min-width: 680px){
-		#painting .content{height: 680px;}
+		#painting .content{height: 730px;}
     }
      @media  (max-width: 679px) {
 		#painting .content{height: auto;}
